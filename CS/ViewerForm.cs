@@ -57,7 +57,9 @@ namespace CardCustomLayoutTemplateExample {
             captionValueElement.ForeColor = Color.Blue;
             captionValueElement.FontStyle = FontStyle.Italic;
             captionValueElement.HorizontalAlignment = CardHorizontalAlignment.Right;
-            captionRow.Elements.AddRange(captionTextElement, captionValueElement);
+            CardRowIndicatorElement deltaIndicator = new CardRowIndicatorElement(CardHorizontalAlignment.Right, 22);
+            captionRow.Elements.AddRange(captionTextElement, captionValueElement, deltaIndicator);
+
 
             CardRow absoluteVariationRow = new CardRow();
             absoluteVariationRow.VerticalAlignment = CardVerticalAlignment.Center;
@@ -96,7 +98,7 @@ namespace CardCustomLayoutTemplateExample {
             percentOfTargetText.FontSize = 16;
             percentOfTargetText.ForeColor = Color.MediumBlue;
             percentOfTargetText.HorizontalAlignment = CardHorizontalAlignment.Left;
-            percentOfTargetText.Text = "Percent Variation: ";
+            percentOfTargetText.Text = "Percent of Target: ";
             CardRowDataElement percentOfTargetValue = new CardRowDataElement();
             percentOfTargetValue.FontSize = 20;
             percentOfTargetValue.ValueType = CardRowDataElementType.PercentOfTarget;
