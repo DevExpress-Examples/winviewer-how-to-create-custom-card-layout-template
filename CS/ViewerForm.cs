@@ -9,13 +9,18 @@ namespace CardCustomLayoutTemplateExample
         {
             InitializeComponent();
             dashboardViewer1.Dashboard = CreateDashboardWithCards();
+
         }
         Dashboard CreateDashboardWithCards()
         {
             Dashboard dashboard = new Dashboard();
             dashboard.Title.Text = "Card Custom Template";
             dashboard.CurrencyCultureName = "en-US";
-            DashboardObjectDataSource dataSource = new DashboardObjectDataSource(DataGenerator.GenerateTestData());
+
+            DashboardObjectDataSource dataSource = new DashboardObjectDataSource();
+            dashboardViewer1.AsyncDataLoading += (s, ev) => {
+                ev.Data = DataGenerator.GenerateTestData();
+            };
             dashboard.DataSources.Add(dataSource);
 
             CardDashboardItem cardItem = new CardDashboardItem();

@@ -30,6 +30,7 @@
             // 
             // dashboardViewer1
             // 
+            this.dashboardViewer1.AsyncMode = true;
             this.dashboardViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashboardViewer1.Location = new System.Drawing.Point(0, 0);
             this.dashboardViewer1.Name = "dashboardViewer1";

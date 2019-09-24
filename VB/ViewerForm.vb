@@ -6,17 +6,20 @@ Namespace CardCustomLayoutTemplateExample
 		Inherits DevExpress.XtraEditors.XtraForm
 
 		Public Sub New()
-			InitializeComponent()
-			dashboardViewer1.Dashboard = CreateDashboardWithCards()
+            InitializeComponent()
+            dashboardViewer1.Dashboard = CreateDashboardWithCards()
 		End Sub
 		Private Function CreateDashboardWithCards() As Dashboard
 			Dim dashboard As New Dashboard()
 			dashboard.Title.Text = "Card Custom Template"
 			dashboard.CurrencyCultureName = "en-US"
-			Dim dataSource As New DashboardObjectDataSource(DataGenerator.GenerateTestData())
-			dashboard.DataSources.Add(dataSource)
+            Dim dataSource As New DashboardObjectDataSource()
+            AddHandler dashboardViewer1.AsyncDataLoading, Sub(s, ev)
+                                                              ev.Data = DataGenerator.GenerateTestData()
+                                                          End Sub
+            dashboard.DataSources.Add(dataSource)
 
-			Dim cardItem As New CardDashboardItem()
+            Dim cardItem As New CardDashboardItem()
 			cardItem.SeriesDimensions.Add(New Dimension("Country"))
 			cardItem.SparklineArgument = New Dimension("SalesDate", DateTimeGroupInterval.DayMonthYear)
 			cardItem.DataSource = dataSource
