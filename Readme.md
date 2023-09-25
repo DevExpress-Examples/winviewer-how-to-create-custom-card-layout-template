@@ -3,19 +3,18 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T830544)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-*Files to look at*:
 
-* [Form1.cs](./CS/ViewerForm.cs) (VB: [Form1.vb](./VB/ViewerForm.vb))
-
-
-# How to Create a Custom Template for the Card Dashboard Item
+# Dashboard for WinForms - How to Create a Custom Template for the Card Dashboard Item
 
 This example creates a custom template to display the [Card dashboard item](https://docs.devexpress.com/Dashboard/15263).
 
 ![screenshot](/images/screenshot.png)
 
-
 To accomplish this, create the [CardCustomLayoutTemplate](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.CardCustomLayoutTemplate) instance and assign it to the [Card.LayoutTemplate](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.Card.LayoutTemplate) property of a new [Card](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.Card) instance. Specify required settings and add the **Card** instance to the [CardDashboardItem.Cards](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.CardDashboardItem.Cards) collection.
+
+## Files to Review
+
+* [Form1.cs](./CS/ViewerForm.cs) (VB: [Form1.vb](./VB/ViewerForm.vb))
 
 ## Documentation
 
