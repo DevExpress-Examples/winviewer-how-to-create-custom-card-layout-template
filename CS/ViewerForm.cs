@@ -1,4 +1,5 @@
 ﻿using DevExpress.DashboardCommon;
+using DevExpress.Drawing;
 using System.Drawing;
 
 namespace CardCustomLayoutTemplateExample
@@ -68,7 +69,7 @@ namespace CardCustomLayoutTemplateExample
                 ValueType = CardRowDataElementType.Title,
                 FontSize = 18,
                 ForeColor = Color.Blue,
-                FontStyle = FontStyle.Italic,
+                FontStyle = DXFontStyle.Italic,
                 HorizontalAlignment = CardHorizontalAlignment.Right
             };
             CardRowIndicatorElement deltaIndicator = new CardRowIndicatorElement(CardHorizontalAlignment.Right, 22);
@@ -142,7 +143,7 @@ namespace CardCustomLayoutTemplateExample
             };
             CardRowTextElement totalSalesText = new CardRowTextElement
             {
-                FontStyle = FontStyle.Underline,
+                FontStyle = DXFontStyle.Underline,
                 FontSize = 14,
                 ForeColor = Color.BlueViolet,
                 Text = "Total Sales: ",
@@ -163,7 +164,7 @@ namespace CardCustomLayoutTemplateExample
             };
             CardRowTextElement targetSalesText = new CardRowTextElement
             {
-                FontStyle = FontStyle.Underline,
+                FontStyle = DXFontStyle.Underline,
                 FontSize = 14,
                 ForeColor = Color.BlueViolet,
                 Text = "Target Sales: ",

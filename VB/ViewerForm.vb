@@ -1,5 +1,6 @@
 ﻿Imports DevExpress.DashboardCommon
 Imports System.Drawing
+Imports DevExpress.Drawing
 
 Namespace CardCustomLayoutTemplateExample
 	Partial Public Class Form1
@@ -54,7 +55,7 @@ Namespace CardCustomLayoutTemplateExample
             captionValueElement.ValueType = CardRowDataElementType.Title
             captionValueElement.FontSize = 18
             captionValueElement.ForeColor = Color.Blue
-            captionValueElement.FontStyle = FontStyle.Italic
+            captionValueElement.FontStyle = DXFontStyle.Italic
             captionValueElement.HorizontalAlignment = CardHorizontalAlignment.Right
             Dim deltaIndicator As New CardRowIndicatorElement(CardHorizontalAlignment.Right, 22)
 			captionRow.Elements.AddRange(captionTextElement, captionValueElement, deltaIndicator)
@@ -106,7 +107,7 @@ Namespace CardCustomLayoutTemplateExample
             Dim totalSalesRow As CardRow = New CardRow()
             totalSalesRow.VerticalAlignment = CardVerticalAlignment.Center
             Dim totalSalesText As CardRowTextElement = New CardRowTextElement()
-            totalSalesText.FontStyle = FontStyle.Underline
+            totalSalesText.FontStyle = DXFontStyle.Underline
             totalSalesText.FontSize = 14
             totalSalesText.ForeColor = Color.BlueViolet
             totalSalesText.Text = "Total Sales: "
@@ -121,7 +122,7 @@ Namespace CardCustomLayoutTemplateExample
             Dim targetSalesRow As CardRow = New CardRow()
             targetSalesRow.VerticalAlignment = CardVerticalAlignment.Center
             Dim targetSalesText As CardRowTextElement = New CardRowTextElement()
-            targetSalesText.FontStyle = FontStyle.Underline
+            targetSalesText.FontStyle = DXFontStyle.Underline
             targetSalesText.FontSize = 14
             targetSalesText.ForeColor = Color.BlueViolet
             targetSalesText.Text = "Target Sales: "
